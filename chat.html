@@ -170,7 +170,7 @@
         }
 
         .user-msg-wrapper {
-            max-width: 80%;
+            max-width: 95%; /* Diperlebar jadi 95% */
             align-self: flex-end;
             position: relative;
         }
@@ -188,7 +188,7 @@
         }
 
         .ai-msg-wrapper {
-            max-width: 80%;
+            max-width: 95%; /* Diperlebar jadi 95% */
             align-self: flex-start;
             position: relative;
         }
@@ -357,7 +357,7 @@
         .messages-container {
             flex: 1;
             overflow-y: auto;
-            padding: 20px 24px;
+            padding: 20px 10px; /* Padding kiri-kanan dikurangi */
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -627,7 +627,8 @@
     }
 
     function extractHtmlCode(text) {
-        const htmlRegex = /```html\n([\s\S]*?)\n```/i;
+        const htmlRegex = /```html\n([\s\S]*?)\n
+```/i;
         const match = text.match(htmlRegex);
         if (match) return match[1];
         
